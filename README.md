@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+# Movie Listing App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React.js web application that allows users to search for movies, view detailed movie information, and browse movies with infinite scrolling. This project integrates the OMDB API and follows modern web development practices.
 
-## Available Scripts
+DEPLOYED LINK: https://movie-listing-app-09.netlify.app/
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- Search movies using a debounced API call
+- Type-ahead search suggestions
+- Infinite scrolling for seamless browsing
+- Movie details page with plot, genre, and other information
+- Responsive design for mobile, tablet, and desktop
+- Error handling for invalid searches and API failures
+- Optimized UI with Bootstrap styling
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Tech Stack
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- React.js (Functional Components & Hooks) 
+- React Router (Navigation)
+- Context API (State Management)
+- Bootstrap (UI Components & Styling)
+- OMDB API (Movie Database)
+- Axios (API Calls)
+- Lodash (Debounced Search)
 
-### `npm test`
+## Installation and Setup
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Step 1: Clone the Repository
+```sh
+git clone https://github.com/Tushagangwar/movie-listing.git
+cd movie-listing
+```
+### Step 2: Install Dependencies
+```sh
+npm install
+```
+### Step 3: Start the Development Server
 
-### `npm run build`
+## Usage Instructions
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Searching for a Movie
+- Type a movie name in the search bar (e.g., "Avengers").
+- The app will show real-time suggestions based on your input.
+- Select a movie from the suggestions or press Enter to view the search results.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Viewing Movie Details
+- Click on any movie poster in the listing.
+- You will be redirected to the Movie Details Page, which displays:
+  - Title, Genre, and Year
+  - Plot Summary
+  - Movie Poster
+  - Back Button to return to the previous page.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Infinite Scrolling
+- Scroll down the Movie Listing Page.
+- The app will automatically load more movies when you reach the bottom of the page.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Handling No Results
+- If no movies match your search query, you will see a message:
